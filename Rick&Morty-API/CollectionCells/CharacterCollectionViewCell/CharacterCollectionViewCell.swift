@@ -8,10 +8,13 @@
 import UIKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet var characterImageView: UIImageView?
+    @IBOutlet var characterNameLabel: UILabel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }
