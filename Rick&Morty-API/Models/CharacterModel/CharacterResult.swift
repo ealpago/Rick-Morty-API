@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Results{
+struct CharacterResult{
     let id: Int?
     let name: String?
     let status: Status?

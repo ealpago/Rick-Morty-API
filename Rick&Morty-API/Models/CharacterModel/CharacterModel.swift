@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CharactersModel {
-    let info: Info?
-    let results:[Results?] = []
+struct CharacterModel {
+    let info: CharacterInfo?
+    let results:[CharacterResult?] = []
 }
