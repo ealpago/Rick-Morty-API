@@ -25,6 +25,8 @@
 		D1375E5D28BA4DE200CA74CB /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E5C28BA4DE200CA74CB /* EpisodeModel.swift */; };
 		D1375E5F28BA4EAC00CA74CB /* EpisodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E5E28BA4EAC00CA74CB /* EpisodeInfo.swift */; };
 		D1375E6128BA4EBB00CA74CB /* EpisodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E6028BA4EBB00CA74CB /* EpisodeResult.swift */; };
+		D1375E6328BA59E300CA74CB /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E6228BA59E300CA74CB /* NetworkServices.swift */; };
+		D1375E6628BA5D5300CA74CB /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E6528BA5D5300CA74CB /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		D1375E5C28BA4DE200CA74CB /* EpisodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModel.swift; sourceTree = "<group>"; };
 		D1375E5E28BA4EAC00CA74CB /* EpisodeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeInfo.swift; sourceTree = "<group>"; };
 		D1375E6028BA4EBB00CA74CB /* EpisodeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeResult.swift; sourceTree = "<group>"; };
+		D1375E6228BA59E300CA74CB /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		D1375E6528BA5D5300CA74CB /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		D1375E1628BA360400CA74CB /* Rick&Morty-API */ = {
 			isa = PBXGroup;
 			children = (
+				D1375E6428BA5D4100CA74CB /* Constants */,
 				D1375E4A28BA387900CA74CB /* CollectionCells */,
 				D1375E4928BA374200CA74CB /* Scenes */,
 				D1375E4828BA36EE00CA74CB /* Services */,
@@ -162,6 +167,7 @@
 		D1375E4828BA36EE00CA74CB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D1375E6228BA59E300CA74CB /* NetworkServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -208,6 +214,14 @@
 				D1375E6028BA4EBB00CA74CB /* EpisodeResult.swift */,
 			);
 			path = EpisodeModel;
+			sourceTree = "<group>";
+		};
+		D1375E6428BA5D4100CA74CB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D1375E6528BA5D5300CA74CB /* APIConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1375E6628BA5D5300CA74CB /* APIConstants.swift in Sources */,
 				D1375E5828BA4B9600CA74CB /* LocationResult.swift in Sources */,
+				D1375E6328BA59E300CA74CB /* NetworkServices.swift in Sources */,
 				D1375E5F28BA4EAC00CA74CB /* EpisodeInfo.swift in Sources */,
 				D1375E5128BA474500CA74CB /* CharacterResult.swift in Sources */,
 				D1375E1C28BA360400CA74CB /* ViewController.swift in Sources */,
