@@ -16,6 +16,9 @@
 		D1375E2F28BA360700CA74CB /* Rick_Morty_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E2E28BA360700CA74CB /* Rick_Morty_APITests.swift */; };
 		D1375E3928BA360700CA74CB /* Rick_Morty_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E3828BA360700CA74CB /* Rick_Morty_APIUITests.swift */; };
 		D1375E3B28BA360700CA74CB /* Rick_Morty_APIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E3A28BA360700CA74CB /* Rick_Morty_APIUITestsLaunchTests.swift */; };
+		D1375E4C28BA3B8E00CA74CB /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E4B28BA3B8E00CA74CB /* CharactersModel.swift */; };
+		D1375E4F28BA428D00CA74CB /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E4E28BA428D00CA74CB /* Info.swift */; };
+		D1375E5128BA474500CA74CB /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E5028BA474500CA74CB /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		D1375E3428BA360700CA74CB /* Rick&Morty-APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick&Morty-APIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1375E3828BA360700CA74CB /* Rick_Morty_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_Morty_APIUITests.swift; sourceTree = "<group>"; };
 		D1375E3A28BA360700CA74CB /* Rick_Morty_APIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_Morty_APIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1375E4B28BA3B8E00CA74CB /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		D1375E4E28BA428D00CA74CB /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		D1375E5028BA474500CA74CB /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,10 @@
 		D1375E1628BA360400CA74CB /* Rick&Morty-API */ = {
 			isa = PBXGroup;
 			children = (
+				D1375E4A28BA387900CA74CB /* CollectionCells */,
+				D1375E4928BA374200CA74CB /* Scenes */,
+				D1375E4828BA36EE00CA74CB /* Services */,
+				D1375E4728BA36E700CA74CB /* Models */,
 				D1375E1728BA360400CA74CB /* AppDelegate.swift */,
 				D1375E1928BA360400CA74CB /* SceneDelegate.swift */,
 				D1375E1B28BA360400CA74CB /* ViewController.swift */,
@@ -125,6 +135,45 @@
 				D1375E3A28BA360700CA74CB /* Rick_Morty_APIUITestsLaunchTests.swift */,
 			);
 			path = "Rick&Morty-APIUITests";
+			sourceTree = "<group>";
+		};
+		D1375E4728BA36E700CA74CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1375E4D28BA427100CA74CB /* CharactersModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1375E4828BA36EE00CA74CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D1375E4928BA374200CA74CB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D1375E4A28BA387900CA74CB /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		D1375E4D28BA427100CA74CB /* CharactersModel */ = {
+			isa = PBXGroup;
+			children = (
+				D1375E4B28BA3B8E00CA74CB /* CharactersModel.swift */,
+				D1375E4E28BA428D00CA74CB /* Info.swift */,
+				D1375E5028BA474500CA74CB /* Results.swift */,
+			);
+			path = CharactersModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1375E5128BA474500CA74CB /* Results.swift in Sources */,
 				D1375E1C28BA360400CA74CB /* ViewController.swift in Sources */,
+				D1375E4C28BA3B8E00CA74CB /* CharactersModel.swift in Sources */,
 				D1375E1828BA360400CA74CB /* AppDelegate.swift in Sources */,
+				D1375E4F28BA428D00CA74CB /* Info.swift in Sources */,
 				D1375E1A28BA360400CA74CB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
