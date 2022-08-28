@@ -10,11 +10,10 @@ import UIKit
 
 
 class CollectionCellModel{
-    var characterImage: UIImageView?
-    var characterName: UILabel?
-
-    init(characterImage: UIImageView?, characterName: UILabel?) {
-        self.characterImage = characterImage
-        self.characterName = characterName
+    var items:[CollectionCellModelItems?] = []
+   
+    init(items: [CollectionCellModelItems?]) {
+        self.items = items
     }
 }
+

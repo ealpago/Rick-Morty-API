@@ -30,6 +30,7 @@
 		D1375E6E28BA6B0000CA74CB /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E6C28BA6B0000CA74CB /* CharacterCollectionViewCell.swift */; };
 		D1375E6F28BA6B0000CA74CB /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1375E6D28BA6B0000CA74CB /* CharacterCollectionViewCell.xib */; };
 		D1D00F1828BC01D200B13B79 /* CollectionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D00F1728BC01D200B13B79 /* CollectionCellModel.swift */; };
+		D1D00F1A28BC046A00B13B79 /* CollectionCellModelItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D00F1928BC046A00B13B79 /* CollectionCellModelItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D1375E6C28BA6B0000CA74CB /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1375E6D28BA6B0000CA74CB /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		D1D00F1728BC01D200B13B79 /* CollectionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellModel.swift; sourceTree = "<group>"; };
+		D1D00F1928BC046A00B13B79 /* CollectionCellModelItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellModelItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				D1D00F1728BC01D200B13B79 /* CollectionCellModel.swift */,
+				D1D00F1928BC046A00B13B79 /* CollectionCellModelItems.swift */,
 			);
 			path = CollectionCellModels;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				D1375E5828BA4B9600CA74CB /* LocationResult.swift in Sources */,
 				D1375E6328BA59E300CA74CB /* NetworkServices.swift in Sources */,
 				D1375E5F28BA4EAC00CA74CB /* EpisodeInfo.swift in Sources */,
+				D1D00F1A28BC046A00B13B79 /* CollectionCellModelItems.swift in Sources */,
 				D1375E5128BA474500CA74CB /* CharacterResult.swift in Sources */,
 				D1375E1C28BA360400CA74CB /* ViewController.swift in Sources */,
 				D1375E5D28BA4DE200CA74CB /* EpisodeModel.swift in Sources */,
