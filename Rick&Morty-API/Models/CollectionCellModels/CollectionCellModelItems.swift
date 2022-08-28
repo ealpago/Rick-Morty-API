@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 class CollectionCellModelItems{
-    var characterImage: UIImageView?
-    var characterName: UILabel?
+    var characterImage: String?
+    var characterName: String?
 
-    init(characterImage: UIImageView?, characterName: UILabel?) {
+    init(characterImage: String?, characterName: String?) {
         self.characterImage = characterImage
         self.characterName = characterName
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Info: Codable {
+class CharacterInfo: Codable {
     var count, pages: Int?
     var next: String?
 

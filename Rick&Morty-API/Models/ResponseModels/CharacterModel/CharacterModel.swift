@@ -6,10 +6,10 @@
 import Foundation
 
 class CharacterModel: Codable {
-    var info: Info?
-    var results: [Result]?
+    var info: CharacterInfo?
+    var results: [CharacterResult]?
 
-    init(info: Info?, results: [Result]?) {
+    init(info: CharacterInfo?, results: [CharacterResult]?) {
         self.info = info
         self.results = results
     }
