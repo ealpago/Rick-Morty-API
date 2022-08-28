@@ -180,7 +180,6 @@
 		D1375E4928BA374200CA74CB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D1375E7128BA6B2C00CA74CB /* CharacterDetailsPage */,
 				D1375E6928BA694C00CA74CB /* CharacterListPage */,
 			);
 			path = Scenes;
@@ -248,13 +247,6 @@
 				D1375E6D28BA6B0000CA74CB /* CharacterCollectionViewCell.xib */,
 			);
 			path = CharacterCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		D1375E7128BA6B2C00CA74CB /* CharacterDetailsPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CharacterDetailsPage;
 			sourceTree = "<group>";
 		};
 		D1D00F1528BC00FF00B13B79 /* CollectionCellModels */ = {
