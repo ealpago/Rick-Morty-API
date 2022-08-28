@@ -5,7 +5,6 @@
 
 import Foundation
 
-// MARK: - CharacterModel
 class CharacterModel: Codable {
     var info: Info?
     var results: [Result]?
