@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct CharacterInfo {
-    let count: Int?
-    let pages: Int?
-    let next: String?
+class Info: Codable {
+    var count, pages: Int?
+    var next: String?
+
+    init(count: Int?, pages: Int?, next: String?) {
+        self.count = count
+        self.pages = pages
+        self.next = next
+    }
 }

@@ -7,41 +7,26 @@
 
 import Foundation
 
-struct CharacterResult{
-    let id: Int?
-    let name: String?
-    let status: Status?
-    let species: Species?
-    let type: String?
-    let gender: Gender?
-    let origin: Location?
-    let location: Location?
-    let image: String?
-    let episode: [String?] = []
-    let url: String?
-    let created: String?
+class Result: Codable {
+    var id: Int?
+    var name, airDate, episode: String?
+    var characters: [String]?
+    var url: String?
+    var created: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case airDate = "air_date"
+        case episode, characters, url, created
+    }
+
+    init(id: Int?, name: String?, airDate: String?, episode: String?, characters: [String]?, url: String?, created: String?) {
+        self.id = id
+        self.name = name
+        self.airDate = airDate
+        self.episode = episode
+        self.characters = characters
+        self.url = url
+        self.created = created
+    }
 }
-
-enum Gender {
-    case female
-    case male
-    case unknown
-}
-
-struct Location {
-    let name: String
-    let url: String
-}
-
-enum Species {
-    case alien
-    case human
-}
-
-enum Status {
-    case alive
-    case dead
-    case unknown
-}
-
-
