@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var CollectionViewCellModelArray:[CollectionCellModel] = []
+    @IBOutlet var CharacterCollectionView: UICollectionView?
+    var collectionViewCellModelArray:[CollectionCellModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        CharacterCollectionView?.register(UINib(nibName: CharacterCollectionCellConstant.shared.CharacterCollectionViewCellNIBName, bundle: nil), forCellWithReuseIdentifier: CharacterCollectionCellConstant.shared.CharacterCollectionViewCellReuseIdentifier)
+        CharacterCollectionView?.delegate = self
+        CharacterCollectionView?.dataSource = self
+        
         managingData()
     }
     
@@ -28,17 +34,29 @@ class ViewController: UIViewController {
                 let collectionModel = CollectionCellModelItems(characterImage: item.url, characterName: item.name)
                 collectionCellModelItemsArray.append(collectionModel)
             }
-    
-            self.CollectionViewCellModelArray.append(CollectionCellModel(items: collectionCellModelItemsArray))
-            
-
+            self.collectionViewCellModelArray.append(CollectionCellModel(items: collectionCellModelItemsArray))
         }
-        
-        print(CollectionViewCellModelArray.count)
+        print(collectionViewCellModelArray.count)
     }
 }
     
 
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return collectionViewCellModelArray[section].items.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return collectionViewCellModelArray.count
+    }
 
-
-
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CharacterCollectionCellConstant.shared.identifier, for: indexPath) as! CharacterCollectionViewCell
+        let cellModel = collectionViewCellModelArray[indexPath.section].items[indexPath.row]!
+        cell.setupCell(cellModel: cellModel)
+        return cell
+    }
+    
+}

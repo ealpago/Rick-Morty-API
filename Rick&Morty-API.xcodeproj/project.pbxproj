@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D10CCF0928BCE67C00696666 /* CharacterCollectionCellConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CCF0828BCE67C00696666 /* CharacterCollectionCellConstant.swift */; };
 		D1375E1828BA360400CA74CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E1728BA360400CA74CB /* AppDelegate.swift */; };
 		D1375E1A28BA360400CA74CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E1928BA360400CA74CB /* SceneDelegate.swift */; };
 		D1375E1C28BA360400CA74CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1375E1B28BA360400CA74CB /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D10CCF0828BCE67C00696666 /* CharacterCollectionCellConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionCellConstant.swift; sourceTree = "<group>"; };
 		D1375E1428BA360400CA74CB /* Rick&Morty-API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&Morty-API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1375E1728BA360400CA74CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1375E1928BA360400CA74CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,11 +131,11 @@
 		D1375E1628BA360400CA74CB /* Rick&Morty-API */ = {
 			isa = PBXGroup;
 			children = (
-				D1375E6428BA5D4100CA74CB /* Constants */,
-				D1375E4A28BA387900CA74CB /* CollectionCells */,
-				D1375E4928BA374200CA74CB /* Scenes */,
-				D1375E4828BA36EE00CA74CB /* Services */,
 				D1375E4728BA36E700CA74CB /* Models */,
+				D1375E4828BA36EE00CA74CB /* Services */,
+				D1375E4928BA374200CA74CB /* Scenes */,
+				D1375E4A28BA387900CA74CB /* CollectionCells */,
+				D1375E6428BA5D4100CA74CB /* Constants */,
 				D1375E1728BA360400CA74CB /* AppDelegate.swift */,
 				D1375E1928BA360400CA74CB /* SceneDelegate.swift */,
 				D1375E2028BA360700CA74CB /* Assets.xcassets */,
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				D1375E6528BA5D5300CA74CB /* APIConstants.swift */,
+				D10CCF0828BCE67C00696666 /* CharacterCollectionCellConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				D1375E5A28BA4D9300CA74CB /* LocationInfo.swift in Sources */,
 				D1375E1A28BA360400CA74CB /* SceneDelegate.swift in Sources */,
 				D1375E5428BA4B4A00CA74CB /* LocationModel.swift in Sources */,
+				D10CCF0928BCE67C00696666 /* CharacterCollectionCellConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

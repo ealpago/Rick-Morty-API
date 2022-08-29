@@ -11,10 +11,19 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var characterImageView: UIImageView?
     @IBOutlet var characterNameLabel: UILabel?
+    private var itemModel: CollectionCellModelItems?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setupCell(cellModel: CollectionCellModelItems) {
+        itemModel = cellModel
+        if let itemModel = itemModel {
+            characterNameLabel?.text = itemModel.characterName
+        }
     }
     
 }
