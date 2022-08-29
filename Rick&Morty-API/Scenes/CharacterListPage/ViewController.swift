@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return collectionViewCellModelArray[section].items.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
