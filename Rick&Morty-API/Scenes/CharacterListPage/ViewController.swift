@@ -28,7 +28,7 @@ class ViewController: UIViewController {
             guard let self = self else {return}
             
             var collectionCellModelItemsArray:[CollectionCellModelItems] = []
-       
+            
             for item in result {
                 let collectionModel = CollectionCellModelItems(characterImage: item.url, characterName: item.name)
                 collectionCellModelItemsArray.append(collectionModel)
@@ -38,12 +38,11 @@ class ViewController: UIViewController {
                 self.CharacterCollectionView?.reloadData()
             }
         }
-        print(collectionViewCellModelArray.count)
     }
 }
-    
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewCellModelArray[section].items.count
     }
@@ -51,14 +50,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return collectionViewCellModelArray.count
     }
-
-    
-    
+        
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier", for: indexPath) as! CharacterCollectionViewCell
         let cellModel = collectionViewCellModelArray[indexPath.section].items[indexPath.row]!
         cell.setupCell(cellModel: cellModel)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 120.0, height: 120.0)
     }
     
 }

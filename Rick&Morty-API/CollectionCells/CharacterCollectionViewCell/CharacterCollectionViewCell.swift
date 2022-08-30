@@ -23,6 +23,11 @@ class CharacterCollectionViewCell: UICollectionViewCell {
         itemModel = cellModel
         if let itemModel = itemModel {
             characterNameLabel?.text = itemModel.characterName
+//                        DispatchQueue.main.async {
+//                            let characterImageUrlPath = itemModel.characterImage ?? ""
+//                            guard let characterImageURL = URL(string: characterImageUrlPath) else {return}
+//                            self.characterImageView?.downloaded(from: characterImageURL)
+//                        }
         }
     }
     
