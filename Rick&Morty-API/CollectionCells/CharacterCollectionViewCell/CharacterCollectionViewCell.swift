@@ -11,6 +11,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var characterImageView: UIImageView?
     @IBOutlet var characterNameLabel: UILabel?
+    @IBOutlet var characterDetailsButton: UIButton?
     private var itemModel: CollectionCellModelItems?
 
     
@@ -30,5 +31,4 @@ class CharacterCollectionViewCell: UICollectionViewCell {
 //                        }
         }
     }
-    
 }

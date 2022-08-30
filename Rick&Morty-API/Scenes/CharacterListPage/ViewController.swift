@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.size.width/3, height: view.frame.size.width/3)
         CharacterCollectionView?.register(UINib(nibName: "CharacterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellIdentifier")
         CharacterCollectionView?.delegate = self
         CharacterCollectionView?.dataSource = self
