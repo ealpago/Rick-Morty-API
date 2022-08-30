@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             var collectionCellModelItemsArray:[CollectionCellModelItems] = []
             
             for item in result {
-                let collectionModel = CollectionCellModelItems(characterImage: item.url, characterName: item.name)
+                let collectionModel = CollectionCellModelItems(characterImage: item.image, characterName: item.name)
                 collectionCellModelItemsArray.append(collectionModel)
             }
             self.collectionViewCellModelArray.append(CollectionCellModel(items: collectionCellModelItemsArray))
