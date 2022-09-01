@@ -1,5 +1,4 @@
 //  UIImageViewExtension.swift
-//  Travel App
 //
 //  Created by Emre Alpago on 14.03.2022.
 //

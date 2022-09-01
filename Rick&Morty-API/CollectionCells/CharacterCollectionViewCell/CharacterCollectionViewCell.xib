@@ -21,10 +21,10 @@
                         <rect key="frame" x="20" y="0.0" width="282" height="268"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="kAd-94-F43" userLabel="Character Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="282" height="188"/>
+                                <rect key="frame" x="0.0" y="0.0" width="282" height="178"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JCV-Jv-rgl" userLabel="Text Stack View">
-                                <rect key="frame" x="0.0" y="188" width="282" height="80"/>
+                                <rect key="frame" x="0.0" y="178" width="282" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLs-Gl-plq" userLabel="Character Name Label">
                                         <rect key="frame" x="0.0" y="0.0" width="282" height="40"/>
@@ -35,17 +35,30 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy0-XK-FpJ">
-                                        <rect key="frame" x="0.0" y="40" width="282" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPD-xY-ycy">
+                                        <rect key="frame" x="0.0" y="40" width="282" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy0-XK-FpJ">
+                                                <rect key="frame" x="50" y="0.0" width="182" height="40"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="lSg-M2-2m7"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Go to Details">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="lSg-M2-2m7"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zy0-XK-FpJ" secondAttribute="bottom" constant="10" id="3IP-dr-0e6"/>
+                                            <constraint firstItem="Zy0-XK-FpJ" firstAttribute="top" secondItem="OPD-xY-ycy" secondAttribute="top" id="Hv8-I6-2VO"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zy0-XK-FpJ" secondAttribute="trailing" constant="50" id="dFU-ki-aZd"/>
+                                            <constraint firstItem="Zy0-XK-FpJ" firstAttribute="leading" secondItem="OPD-xY-ycy" secondAttribute="leading" constant="50" id="roB-OJ-rxh"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Go to Details">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                             </stackView>
@@ -65,11 +78,15 @@
                 <outlet property="characterDetailsButton" destination="Zy0-XK-FpJ" id="f6d-PT-hgk"/>
                 <outlet property="characterImageView" destination="kAd-94-F43" id="AMV-U5-gyY"/>
                 <outlet property="characterNameLabel" destination="VLs-Gl-plq" id="cus-sC-HSh"/>
+                <outlet property="topStackView" destination="8aU-Tq-as4" id="8RJ-D2-OBT"/>
             </connections>
             <point key="canvasLocation" x="98.550724637681171" y="237.05357142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

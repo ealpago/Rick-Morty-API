@@ -12,12 +12,19 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     @IBOutlet var characterImageView: UIImageView?
     @IBOutlet var characterNameLabel: UILabel?
     @IBOutlet var characterDetailsButton: UIButton?
+    @IBOutlet var topStackView: UIStackView?
     private var itemModel: CollectionCellModelItems?
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.topStackView?.layer.masksToBounds = true
+        self.topStackView?.layer.cornerRadius = self.topStackView!.frame.width/20.0
+        self.topStackView?.layer.borderWidth = 0.3
+        
+        self.characterDetailsButton?.layer.cornerRadius = self.characterDetailsButton!.frame.width/10
     }
     
     func setupCell(cellModel: CollectionCellModelItems) {
