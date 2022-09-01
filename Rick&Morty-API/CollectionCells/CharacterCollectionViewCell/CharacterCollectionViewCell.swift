@@ -19,7 +19,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+    
         self.topStackView?.layer.masksToBounds = true
         self.topStackView?.layer.cornerRadius = self.topStackView!.frame.width/20.0
         self.topStackView?.layer.borderWidth = 0.3
