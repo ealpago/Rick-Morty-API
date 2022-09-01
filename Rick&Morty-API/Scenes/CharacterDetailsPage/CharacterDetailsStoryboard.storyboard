@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +11,7 @@
         <!--Character Details View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController restorationIdentifier="CharacterDetailsViewController" storyboardIdentifier="CharacterDetailsViewController" id="Y6W-OH-hqX" customClass="CharacterDetailsViewController" customModule="Rick_Morty_API" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterDetailsViewController" id="Y6W-OH-hqX" customClass="CharacterDetailsViewController" customModule="Rick_Morty_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,39 +19,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fr4-RQ-OiX" userLabel="Top Stack View">
                                 <rect key="frame" x="20" y="44" width="374" height="778"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKa-cI-OiU">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSj-Q9-pzs">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="T3f-M5-3Rs"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="backButtonTapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rnX-fW-Foz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="MSj-Q9-pzs" firstAttribute="top" secondItem="wKa-cI-OiU" secondAttribute="top" id="8JK-5K-qgX"/>
-                                            <constraint firstAttribute="bottom" secondItem="MSj-Q9-pzs" secondAttribute="bottom" id="g3a-s3-rTF"/>
-                                            <constraint firstItem="MSj-Q9-pzs" firstAttribute="leading" secondItem="wKa-cI-OiU" secondAttribute="leading" id="nTz-mp-cH4"/>
-                                        </constraints>
-                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sezon-6" translatesAutoresizingMaskIntoConstraints="NO" id="CjQ-HW-frd">
-                                        <rect key="frame" x="0.0" y="45" width="374" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="Tsu-he-984"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2t-uS-Ryv">
-                                        <rect key="frame" x="0.0" y="360" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="315" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="j9v-Gf-FTM"/>
                                         </constraints>
@@ -61,28 +35,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kM4-g7-TEr" userLabel="TextStackView">
-                                        <rect key="frame" x="0.0" y="415" width="374" height="363"/>
+                                        <rect key="frame" x="0.0" y="370" width="374" height="408"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRR-vz-DBR">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="91"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="102"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqq-RT-C2U">
-                                                <rect key="frame" x="0.0" y="91" width="374" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="102" width="374" height="102"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axz-sa-5hD">
-                                                <rect key="frame" x="0.0" y="181.5" width="374" height="91"/>
+                                                <rect key="frame" x="0.0" y="204" width="374" height="102"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXG-Tx-GLk">
-                                                <rect key="frame" x="0.0" y="272.5" width="374" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="306" width="374" height="102"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -103,7 +77,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="M9w-24-RGp"/>
                     <connections>
-                        <outlet property="backButton" destination="MSj-Q9-pzs" id="Gsz-w5-Cg6"/>
                         <outlet property="characterDetailsGenderLabel" destination="EXG-Tx-GLk" id="uDp-dq-tMU"/>
                         <outlet property="characterDetailsImageView" destination="CjQ-HW-frd" id="zCz-rH-Ciq"/>
                         <outlet property="characterDetailsNameLabel" destination="M2t-uS-Ryv" id="y2G-d7-C4D"/>
@@ -118,13 +91,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="sezon-6" width="332" height="472"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

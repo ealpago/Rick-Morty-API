@@ -66,10 +66,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "CharacterDetailsStoryboard", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController")
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "CharacterDetailsStoryboard", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController")
+//        controller.modalPresentationStyle = .fullScreen
+//        self.present(controller, animated: true, completion: nil)
+        let vc = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+
     }
     
 }
