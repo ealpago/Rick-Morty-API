@@ -11,7 +11,7 @@
         <!--Character Details View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController restorationIdentifier="CharacterDetailsViewControllerRestorationID" storyboardIdentifier="CharacterDetailsViewControllerStoryboardID" id="Y6W-OH-hqX" customClass="CharacterDetailsViewController" customModule="Rick_Morty_API" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="CharacterDetailsViewController" storyboardIdentifier="CharacterDetailsViewController" id="Y6W-OH-hqX" customClass="CharacterDetailsViewController" customModule="Rick_Morty_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Fr4-RQ-OiX" secondAttribute="bottom" constant="40" id="ZGM-C7-ZjV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="M9w-24-RGp"/>
                     <connections>
                         <outlet property="characterDetailsGenderLabel" destination="EXG-Tx-GLk" id="uDp-dq-tMU"/>
                         <outlet property="characterDetailsImageView" destination="CjQ-HW-frd" id="zCz-rH-Ciq"/>
@@ -86,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="110"/>
+            <point key="canvasLocation" x="973.91304347826099" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
