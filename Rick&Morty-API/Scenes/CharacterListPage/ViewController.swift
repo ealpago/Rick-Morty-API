@@ -40,10 +40,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
 }
-
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,5 +71,4 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         self.navigationController?.pushViewController(vc!, animated: true)
 
     }
-    
 }
