@@ -15,6 +15,7 @@ class CharacterDetailsViewController: UIViewController {
     @IBOutlet var characterDetailsSpeciesLabel: UILabel?
     @IBOutlet var characterDetailsTypeLabel: UILabel?
     @IBOutlet var characterDetailsGenderLabel: UILabel?
+    @IBOutlet var backButton: UIButton?
 
 
     override func viewDidLoad() {
@@ -22,6 +23,10 @@ class CharacterDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func backButtonTapped() {
+           self.dismiss(animated: true, completion: nil)
+       }
     
 
     /*
