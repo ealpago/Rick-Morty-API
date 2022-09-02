@@ -7,7 +7,7 @@
 
 import UIKit
 
-//Passing data with delegate?
+//MARK: -Passing data with delegate?
 protocol DetailsDelegate {
     func details(detailsModel: CollectionCellModelItems?)
 }
@@ -44,6 +44,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    //MARK: -Passing data with delegate?
     @IBAction func characterDetailsButtonTapped(_ sender: UIButton){
         delegate.details(detailsModel: itemModel)
     }
