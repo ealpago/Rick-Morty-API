@@ -31,13 +31,13 @@ class CharacterDetailsViewController: UIViewController {
     
     func setupUI(){
         print(details?.characterOrigin?.name ?? "")
-        characterDetailsIDLabel?.text = String(details?.characterID ?? 0)
-        characterDetailsNameLabel?.text = details?.characterName ?? ""
-        characterDetailsStatusLabel?.text = details?.characterStatus?.rawValue ?? ""
-        characterDetailsSpeciesLabel?.text = details?.characterSpecies?.rawValue ?? ""
-        characterDetailsOriginLabel?.text = details?.characterOrigin?.name ?? ""
-        characterDetailsGenderLabel?.text = details?.characterGender?.rawValue ?? ""
-        characterDetailsLocationLabel?.text = details?.characterLocation?.name ?? ""
+        characterDetailsIDLabel?.text = "ID: \(String(details?.characterID ?? 0))"
+        characterDetailsNameLabel?.text = (details?.characterName ?? "")
+        characterDetailsStatusLabel?.text = "Status: \(details?.characterStatus?.rawValue ?? "")"
+        characterDetailsSpeciesLabel?.text = "Species: \(details?.characterSpecies?.rawValue ?? "")"
+        characterDetailsOriginLabel?.text = "Origin: \(details?.characterOrigin?.name ?? "")"
+        characterDetailsGenderLabel?.text = "Gender: \(details?.characterGender?.rawValue ?? "")"
+        characterDetailsLocationLabel?.text = "Location: \(details?.characterLocation?.name ?? "")"
         DispatchQueue.main.async {
             let characterImageUrlPath = self.details?.characterImage ?? ""
             guard let characterImageURL = URL(string: characterImageUrlPath) else {return}
