@@ -20,9 +20,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     @IBOutlet var topStackView: UIStackView?
     private var itemModel: CollectionCellModelItems?
     
-//    weak var parent:ViewController?
     var delegate: DetailsDelegate!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

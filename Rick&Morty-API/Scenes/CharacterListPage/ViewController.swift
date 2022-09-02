@@ -15,12 +15,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: view.frame.size.width/3, height: view.frame.size.width/3)
+        
         CharacterCollectionView?.register(UINib(nibName: "CharacterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellIdentifier")
         CharacterCollectionView?.delegate = self
         CharacterCollectionView?.dataSource = self
-        
         
         managingData()
     }
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
             var collectionCellModelItemsArray:[CollectionCellModelItems] = []
             
             for item in result {
-                let collectionModel = CollectionCellModelItems(characterImage: item.image, characterName: item.name)
+                let collectionModel = CollectionCellModelItems(characterImage: item.image,characterID: item.id, characterName: item.name, characterStatus: item.status, characterSpecies: item.species, characterOrigin: item.origin, characterGender: item.gender, characterLocation: item.location)
                 collectionCellModelItemsArray.append(collectionModel)
             }
             self.collectionViewCellModelArray.append(CollectionCellModel(items: collectionCellModelItemsArray))
@@ -57,7 +58,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier", for: indexPath) as! CharacterCollectionViewCell
         let cellModel = collectionViewCellModelArray[indexPath.section].items[indexPath.row]!
         cell.setupCell(cellModel: cellModel)
-//        cell.parent = self
         cell.delegate = self
         return cell
     }
@@ -67,20 +67,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //        let storyboard = UIStoryboard(name: "CharacterDetailsStoryboard", bundle: nil)
-        //        let controller = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController")
-        //        controller.modalPresentationStyle = .fullScreen
-        //        self.present(controller, animated: true, completion: nil)
         let vc = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
         self.navigationController?.pushViewController(vc!, animated: true)
-        
     }
 }
 
 extension ViewController: DetailsDelegate{
     func details(detailsModel: CollectionCellModelItems?) {
         let vc = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
-        print("\(detailsModel?.characterName ?? "GELMEDİ")")
         vc?.initialize(details: detailsModel!)
         self.navigationController?.pushViewController(vc!, animated: true)
     }
