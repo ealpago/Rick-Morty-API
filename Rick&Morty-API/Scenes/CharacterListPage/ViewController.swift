@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet var CharacterCollectionView: UICollectionView?
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
         CharacterCollectionView?.register(UINib(nibName: "CharacterCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellIdentifier")
         CharacterCollectionView?.delegate = self
         CharacterCollectionView?.dataSource = self
+        
         
         managingData()
     }
@@ -50,11 +52,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return collectionViewCellModelArray.count
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier", for: indexPath) as! CharacterCollectionViewCell
         let cellModel = collectionViewCellModelArray[indexPath.section].items[indexPath.row]!
         cell.setupCell(cellModel: cellModel)
+        cell.parent = self
         return cell
     }
     
@@ -63,12 +66,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "CharacterDetailsStoryboard", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController")
-//        controller.modalPresentationStyle = .fullScreen
-//        self.present(controller, animated: true, completion: nil)
+        //        let storyboard = UIStoryboard(name: "CharacterDetailsStoryboard", bundle: nil)
+        //        let controller = storyboard.instantiateViewController(withIdentifier: "CharacterDetailsViewController")
+        //        controller.modalPresentationStyle = .fullScreen
+        //        self.present(controller, animated: true, completion: nil)
         let vc = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
         self.navigationController?.pushViewController(vc!, animated: true)
-
+        
     }
 }

@@ -49,6 +49,9 @@
                                                 <state key="normal" title="Go to Details">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="characterDetailsButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="vZi-R1-xaI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
