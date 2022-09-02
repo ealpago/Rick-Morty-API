@@ -9,7 +9,7 @@ import UIKit
 
 //Passing data with delegate?
 protocol DetailsDelegate {
-    func details(_ input: CollectionCellModelItems?)
+    func details(detailsModel: CollectionCellModelItems?)
 }
 
 class CharacterCollectionViewCell: UICollectionViewCell {
@@ -20,8 +20,8 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     @IBOutlet var topStackView: UIStackView?
     private var itemModel: CollectionCellModelItems?
     
-    weak var parent:ViewController?
-    var delegate: DetailsDelegate?
+//    weak var parent:ViewController?
+    var delegate: DetailsDelegate!
     
     
     override func awakeFromNib() {
@@ -47,8 +47,6 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func characterDetailsButtonTapped(_ sender: UIButton){
-        self.delegate?.details(itemModel)
-        let detailsVC = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
-        self.parent?.navigationController?.pushViewController(detailsVC!, animated: true)
+        delegate.details(detailsModel: itemModel)
     }
 }

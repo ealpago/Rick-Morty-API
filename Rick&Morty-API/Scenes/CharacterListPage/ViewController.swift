@@ -57,7 +57,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellIdentifier", for: indexPath) as! CharacterCollectionViewCell
         let cellModel = collectionViewCellModelArray[indexPath.section].items[indexPath.row]!
         cell.setupCell(cellModel: cellModel)
-        cell.parent = self
+//        cell.parent = self
+        cell.delegate = self
         return cell
     }
     
@@ -73,5 +74,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let vc = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         
+    }
+}
+
+extension ViewController: DetailsDelegate{
+    func details(detailsModel: CollectionCellModelItems?) {
+        let vc = UIStoryboard.init(name: "CharacterDetailsStoryboard", bundle: Bundle.main).instantiateViewController(withIdentifier: "CharacterDetailsViewController") as? CharacterDetailsViewController
+        print("\(detailsModel?.characterName ?? "GELMEDİ")")
+        vc?.initialize(details: detailsModel!)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

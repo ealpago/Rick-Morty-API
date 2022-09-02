@@ -15,12 +15,28 @@ class CharacterDetailsViewController: UIViewController {
     @IBOutlet var characterDetailsSpeciesLabel: UILabel?
     @IBOutlet var characterDetailsTypeLabel: UILabel?
     @IBOutlet var characterDetailsGenderLabel: UILabel?
-
+    
+    var details: CollectionCellModelItems?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
+    func initialize(details: CollectionCellModelItems){
+        self.details = details
+    }
+    
+    func setupUI(){
+        characterDetailsNameLabel?.text = details?.characterName ?? ""
+    }
+    
 }
+
+//MARK: - DetailsDelegate
+//extension CharacterDetailsViewController: DetailsDelegate{
+//    func details(_ input: CollectionCellModelItems?) {
+//        characterDetailsNameLabel?.text = input?.characterName ?? ""
+//    }
+//}
