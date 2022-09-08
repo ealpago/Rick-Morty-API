@@ -31,12 +31,11 @@ class ViewController: UIViewController {
             guard let result = details.results else {return}
             guard let self = self else {return}
             
-            var collectionCellModelItemsArray:[CollectionCellModelItems] = []
-            
-            for item in result {
-                let collectionModel = CollectionCellModelItems(characterImage: item.image,characterID: item.id, characterName: item.name, characterStatus: item.status, characterSpecies: item.species, characterOrigin: item.origin, characterGender: item.gender, characterLocation: item.location)
-                collectionCellModelItemsArray.append(collectionModel)
+            //MARK: - Compact Map Kullan
+            let collectionCellModelItemsArray:[CollectionCellModelItems] = result.compactMap { CharacterResult in
+                CollectionCellModelItems(characterImage: CharacterResult.image, characterID: CharacterResult.id, characterName: CharacterResult.name, characterStatus: CharacterResult.status, characterSpecies: CharacterResult.species, characterOrigin: CharacterResult.origin, characterGender: CharacterResult.gender, characterLocation: CharacterResult.location)
             }
+            //MARK: - Sectiondan celle aktar
             self.collectionViewCellModelArray.append(CollectionCellModel(items: collectionCellModelItemsArray))
             DispatchQueue.main.async {
                 self.CharacterCollectionView?.reloadData()

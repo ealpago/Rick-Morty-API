@@ -42,5 +42,6 @@ class CharacterDetailsViewController: UIViewController {
             let characterImageUrlPath = self.details?.characterImage ?? ""
             guard let characterImageURL = URL(string: characterImageUrlPath) else {return}
             self.characterDetailsImageView?.downloaded(from: characterImageURL)
-        }    }
+        }
+    }
 }
